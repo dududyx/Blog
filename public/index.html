@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>DUDU</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="DUDU">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="DUDU">
+<meta property="og:description">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="DUDU">
+<meta name="twitter:description">
+  
+    <link rel="alternative" href="/atom.xml" title="DUDU" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">DUDU</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">走出舒适区</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-CSS" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/03/26/CSS/" class="article-date">
+  <time datetime="2015-03-26T03:17:51.000Z" itemprop="datePublished">2015-03-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/03/26/CSS/">CSS</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="CSS知识点总结">CSS知识点总结</h3><p>CSS就是一种先选择HTML元素，然后设定选中元素CSS属性的机制。</p>
+<h4 id="为文档添加样式的三种方法">为文档添加样式的三种方法</h4><p>有三种方法可以把CSS添加到网页中，分别是写在元素标签里（也叫行内样式）、写在<code>&lt;style&gt;</code>标签里（也叫嵌入样式）和写在单独的CSS样式表中（也叫链接样式）</p>
+<h5 id="行内样式">行内样式</h5><p>行内样式是写在特定HTML标签的style属性里的，例如：</p>
+<pre><code>&lt;p style=<span class="string">"font-size: 12px; font-weight: bold; font-size: italic; color: red"</span>&gt;By adding <span class="keyword">inline</span> CSS styling <span class="keyword">to</span> this paragraph,you <span class="keyword">override</span> the <span class="keyword">default</span> styles.&lt;/p&gt;
+</code></pre><p>行内样式的作用范围非常有限。行内样式只能影响它所在的标签，而且总会覆盖嵌入样式和链接样式。</p>
+<h5 id="嵌入样式">嵌入样式</h5><p>嵌入的CSS样式是放在HTML文档的head元素中的，例如：</p>
+<pre><code><span class="tag">&lt;<span class="title">head</span>&gt;</span>
+    <span class="comment">&lt;!-- 其他head元素（如meta、title）放在这里 --&gt;</span>
+    <span class="tag">&lt;<span class="title">style</span> <span class="attribute">type</span>=<span class="value">"text/css"</span>&gt;</span><span class="css">
+        <span class="tag">h1</span><span class="rules">{<span class="rule"><span class="attribute">font-size</span>:<span class="value"> <span class="number">16px</span></span></span>;<span class="rule">}</span></span>
+        <span class="tag">p</span><span class="rules">{<span class="rule"><span class="attribute">color</span>:<span class="value"> blue</span></span>;<span class="rule">}</span></span>
+    </span><span class="tag">&lt;/<span class="title">style</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+</code></pre><p>嵌入样式的应用范围仅限于当前页面。页面样式会覆盖外部样式表中的样式，但会被行内样式覆盖。</p>
+<h5 id="链接样式">链接样式</h5><p>在创建包含多个页面的网站时，需要把样式集中在一个单独的文件里，这个文件就叫样式表。可以在任意多个HTML页面中链接同一个样式表文件，每个页面中只需加入类似下面的这一行代码即可：</p>
+<pre><code>&lt;link <span class="variable">href=</span><span class="string">"styles.css"</span> <span class="variable">rel=</span><span class="string">"stylesheet"</span> <span class="variable">type=</span><span class="string">"text/css"</span> /&gt;
+</code></pre><p>链接样式的作用范围可以是整个网站。</p>
+<p>除了以上三种为页面添加样式的方法，还有一种在样式表中链接其他样式表的方法，应用@import指令：</p>
+<pre><code><span class="at_rule">@import</span> <span class="function"><span class="title">url</span><span class="params">(css/style2.css)</span></span>
+</code></pre><p>要注意的是，@import指令必须出现在样式表中其他样式之前，否则@import 引用的样式表不会被加载。</p>
+<p>当浏览器遇到开标签<code>&lt;style&gt;</code>时，就会由解释HTML代码切换为解释CSS代码，等遇到闭标签<code>&lt;style&gt;</code>时，它会再切换回解释HTML代码。</p>
+<hr>
+<h4 id="选择符">选择符</h4><p>用于选择特定元素的选择符又分三种。</p>
+<ul>
+<li>上下文选择符。基于祖先或同胞元素选择一个元素。</li>
+<li>ID和类选择符。基于id和class属性的值选择元素。</li>
+<li>属性选择符。基于属性的有无和特征选择元素。</li>
+</ul>
+<h5 id="特殊的上下文选择符">特殊的上下文选择符</h5><ul>
+<li>子选择符 &gt; :  标签1 &gt; 标签2</li>
+<li>紧邻同胞选择符 + :  标签1 + 标签2</li>
+<li>一般同胞选择符 ~ :  标签1 ~ 标签2</li>
+<li>通用选择符 <em> : section </em> a{font-size:1.3em}任何是section孙子元素，而非子元素的a标签都会被选中。</li>
+</ul>
+<p>tips: color属性设定的是前景色。前景色既影响文本也影响边框，但人们通常只用它设定文本颜色。</p>
+<p>ID属性：<br>ID也可以用在页内导航链接中。其目标是同一页的另一个位置。</p>
+<pre><code>&lt;<span class="operator">a</span> href=<span class="string">"#bio"</span>&gt;Biography&lt;/<span class="operator">a</span>&gt;
+&lt;<span class="operator">a</span> href=<span class="string">"#"</span>&gt;Back <span class="built_in">to</span> Top&lt;/<span class="operator">a</span>&gt;
+</code></pre><h5 id="ID和类的小结">ID和类的小结</h5><p>不要乱用类：<br>不要像使用ID一样，每个类都指定一个不同的类名，然后再为每个类编写规则。实际上，继承和上下文选择符能让不同的标签共享样式，从而降低需要编写和维护的CSS量。</p>
+<p>ID的用途是在页面标记中唯一地标识一个特定的元素。它能够为我们编写CSS规则提供必要的上下文，排除无关的标记，而只选择该上下文中的标签。</p>
+<hr>
+<h5 id="伪类">伪类</h5><p>UI伪类</p>
+<p>1、链接伪类</p>
+<ul>
+<li>Link。此时，链接就在那儿等着用户点击。</li>
+<li>Visited。用户此前点击过这个链接。</li>
+<li>Hover。鼠标指针正悬停在链接上。</li>
+<li>Active。链接正在被点击（鼠标在元素上按下，还没有释放）。</li>
+</ul>
+<p>a:link{color: black;} </p>
+<p>a:visited{color:gray;}</p>
+<p>a:hover{text-decoration:none;}</p>
+<p>a:active{color:red;}</p>
+<p>由于这4个伪类的特指度相同，如果不按照这里列出的顺序使用它们，浏览器可能不会显示预期结果。</p>
+<p>链接在初始状态时是黑色（默认带下划线）。当鼠标移到上面时（悬停状态），链接的下划线消失，颜色仍然是黑色。当用户在链接上按下鼠标时（活动状态），链接变成红色。而在链接被点击后，也就是鼠标在链接上按下，又在连接上释放后，会触发浏览器打开URL，此后（或者更准确地说，到浏览器访问历史中的这个URL过期或被用户删除之前），链接会一直显示为灰色。</p>
+<p>2、:focus伪类</p>
+<p>e:focus 表单中的文本字段在用户单击它时会获得焦点，然后用户才能在其中输入字符。</p>
+<p>3、:target伪类</p>
+<p>e:target 如果用户点击一个指向页面中其他元素的链接，则那个元素就是目标（target），可以用:target伪类选中它。</p>
+<p>例如：</p>
+<pre><code><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#more_info"</span>&gt;</span>More Information<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+</code></pre><p>位于页面其他地方、ID为more_info的那个元素就是目标。该元素可能是这样的：</p>
+<pre><code>&lt;h2 <span class="property">id</span>=<span class="string">"more_info"</span>&gt;This <span class="keyword">is</span> <span class="keyword">the</span> information you are looking <span class="keyword">for</span>.&lt;/h2&gt;
+</code></pre><p>CSS如下：</p>
+<p><code>#more_info:target{background:#eee;}</code></p>
+<p>会在用户单击链接转向ID为more_info的元素时，为该元素添加浅灰色背景。</p>
+<hr>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/03/26/CSS/" data-id="ci7plb87f000044s64prn0qti" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-HTML" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/03/25/HTML/" class="article-date">
+  <time datetime="2015-03-25T03:40:20.000Z" itemprop="datePublished">2015-03-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/03/25/HTML/">HTML</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>HTML知识点总结</p>
+<p>HTML  超文本标记语言</p>
+<p>html最常用的扩展名为.html   但一些旧的操作系统限制扩展名最多为3个文字符号   所以.htm扩展名也允许使用。</p>
+<p>html4.01规定了3种文档类型：严格、过渡以及框架集</p>
+<pre><code><span class="doctype">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//en" "http://www.w3. org/TR/html4/strict.dtd"&gt;</span>
+
+<span class="doctype">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//en" "http://www.w3. org/TR/html4/loose.dtd"&gt;</span>
+
+<span class="doctype">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//en" "http://www.w3. org/TR/html4/frameset.dtd"&gt;</span>
+</code></pre><p>html5统一</p>
+<pre><code><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+</code></pre><p>HTML用来标记网页的内容，所谓内容，即想要传达给读者的那些东西，比如文字、图片、音频和视频。其目的是为了赋予网页语义，就是给网页内容赋予某些用户代理能够理解的含义。例如浏览器、给视障用户朗读网页的屏幕阅读器、以及搜索引擎放出的Web爬虫都是用户代理，它们需要显示、朗读和分析网页。</p>
+<p>闭合标签与自闭和标签的区别在于，闭合标签包含的是会显示的实际内容，而自闭和标签只是给浏览器提供一个对要显示内容的引用。浏览器会在HTML页面加载的时候，额外向服务器发送请求，以取得自闭和标签引用的内容。</p>
+<p>HTML属性：属性负责为浏览器提供有关标签的额外信息。例如<img>标签中的一个属性alt(alternative，替代内容)，定义的是在图片因故未能加载成功时在屏幕上显示的文本。（视障用户使用的屏幕阅读器会大声读出alt属性的内容）。</p>
+<p>块级元素（比如标题和段落）会相互堆叠在一起沿页面向下排列，每个元素分别占一行。而行内元素（比如链接和图片）则会相互并列，只有在空间不足以并列的情况下才会折到下一行显示。</p>
+<p>块级标签</p>
+<pre><code><span class="keyword">*</span> <span class="variable">&lt;h1&gt;</span>—<span class="variable">&lt;h6&gt;</span>: 6级标签,<span class="variable">&lt;h1&gt;</span>表示最重要
+<span class="keyword">*</span> <span class="variable">&lt;p&gt;</span>: 段落
+<span class="keyword">*</span> <span class="variable">&lt;ol&gt;</span>: 有序列表
+<span class="keyword">*</span> <span class="variable">&lt;li&gt;</span>: 列表项
+<span class="keyword">*</span> <span class="variable">&lt;blockquote&gt;</span>: 独立引用
+</code></pre><p>行内标签</p>
+<pre><code><span class="keyword">*</span> <span class="variable">&lt;a&gt;</span>: 链接
+<span class="keyword">*</span> <span class="variable">&lt;img&gt;</span>: 图片
+<span class="keyword">*</span> <span class="variable">&lt;em&gt;</span>: 斜体
+<span class="keyword">*</span> <span class="variable">&lt;strong&gt;</span>: 重要
+<span class="keyword">*</span> <span class="variable">&lt;abbr&gt;</span>: 简写
+<span class="keyword">*</span> <span class="variable">&lt;cite&gt;</span>: 引证
+<span class="keyword">*</span> <span class="variable">&lt;q&gt;</span>: 文本内引用
+</code></pre><hr>
+<p>关于title标签：标签中的文本会在页面显示时，作为整个页面的标题出现在浏览器窗口顶部的标题栏中。搜索引擎会给title标签中的文字内容赋予很高的权重，而且这些文字也会作为网页标题出现在搜索结果列表中。</p>
+<hr>
+<p>关于meta标签：meta元素可提供有关页面的元信息，比如针对搜索引擎和更新频度的描述和关键词。</p>
+<h5 id="META标签：">META标签：</h5><h6 id="Content-Type">Content-Type</h6><pre><code>&lt;meta <span class="variable">http-equiv=</span><span class="string">"Content-Type"</span> <span class="variable">content=</span><span class="string">"text/html;charset=gb_2312-80"</span>&gt;
+&lt;meta <span class="variable">http-equiv=</span><span class="string">"Content-Language"</span> <span class="variable">content=</span><span class="string">"zh-CN"</span>&gt;
+</code></pre><p>用以说明主页制作所使用的文字以及语言；又如英文是ISO-8859-1字符集，还有BIG5、utf-8、shift-Jis、Euc、Koi8-2等字符集；</p>
+<h6 id="Refresh">Refresh</h6><pre><code>&lt;meta <span class="variable">http-equiv=</span><span class="string">"Refresh"</span> <span class="variable">content=</span><span class="string">"n;url=http://yourlink"</span>&gt;
+</code></pre><p>定时让网页在指定的时间n内，跳转到你的页面；</p>
+<h6 id="Expires">Expires</h6><pre><code>&lt;meta <span class="variable">http-equiv=</span><span class="string">"Expires"</span> <span class="variable">content=</span><span class="string">"Mon,12 May 2001 00:20:00 GMT"</span>&gt;
+</code></pre><p>可以用于设定网页的到期时间，一旦过期则必须到服务器上重新调用。需要注意的是必须使用GMT时间格式；</p>
+<h6 id="set-cookie">set-cookie</h6><pre><code>&lt;meta <span class="variable">http-equiv=</span><span class="string">"set-cookie"</span> <span class="variable">content=</span><span class="string">"Mon,12 May 2001 00:20:00 GMT"</span>&gt;
+</code></pre><p>cookie设定，如果网页过期，存盘的cookie将被删除。需要注意的也是必须使用GMT时间格式；</p>
+<h6 id="windows-Target">windows-Target</h6><pre><code>&lt;meta <span class="variable">http-equiv=</span><span class="string">"windows-Target"</span> <span class="variable">content=</span><span class="string">"_top"</span>&gt;
+</code></pre><p>强制页面在当前窗口中以独立页面显示，可以防止自己的网页被别人当作一个frame页调用；</p>
+<p>HTTP-EQUIV用于向浏览器提供一些说明信息，从而可以根据这些说明做出反应。HTTP-EQUIV其实并不仅仅只有说明网页的字符编码这一个作用，常用的HTTP-EQUIV类型还包括：网页到期时间、默认的脚本语言、默认的风格页语言、网页自动刷新时间等。</p>
+<hr>
+<pre><code><span class="tag">&lt;<span class="title">p</span>&gt;</span>It is <span class="tag">&lt;<span class="title">strong</span>&gt;</span>absolutely critical<span class="tag">&lt;/<span class="title">strong</span>&gt;</span> that <span class="tag">&lt;<span class="title">em</span>&gt;</span>everyone<span class="tag">&lt;/<span class="title">em</span>&gt;</span> does this <span class="tag">&lt;<span class="title">abbr</span> <span class="attribute">title</span>=<span class="value">"as soon as possibel"</span>&gt;</span>ASAP<span class="tag">&lt;/<span class="title">abbr</span>&gt;</span>!<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+</code></pre><ul>
+<li>文本被标记为段落，而其中包含三个行内元素。</li>
+<li>strong标签表示重要，默认以粗体显示。</li>
+<li>em标签表示强调，默认以斜体显示。</li>
+<li>abbr标签表示简写，在Firefox中默认会加上点下划线。</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/03/25/HTML/" data-id="ci7plb88d000b44s65ooa07e0" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-我的第一篇博客" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/03/24/我的第一篇博客/" class="article-date">
+  <time datetime="2015-03-24T09:10:30.000Z" itemprop="datePublished">2015-03-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/技术/">技术</a>►<a class="article-category-link" href="/categories/技术/生活/">生活</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/03/24/我的第一篇博客/">我的第一篇博客</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>我的第一篇博客</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/03/24/我的第一篇博客/" data-id="ci7plb887000144s6pbph596v" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/后端/">后端</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/03/24/hello-world/" class="article-date">
+  <time datetime="2015-03-24T07:08:48.000Z" itemprop="datePublished">2015-03-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/03/24/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/03/24/hello-world/" data-id="ci7plb88b000a44s6b5sz1yxx" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+  
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/">技术</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/技术/生活/">生活</a><span class="category-list-count">1</span></li></ul></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/后端/">后端</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/前端/" style="font-size: NaNpx;">前端</a><a href="/tags/后端/" style="font-size: NaNpx;">后端</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">4</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2015/03/26/CSS/">CSS</a>
+          </li>
+        
+          <li>
+            <a href="/2015/03/25/HTML/">HTML</a>
+          </li>
+        
+          <li>
+            <a href="/2015/03/24/我的第一篇博客/">我的第一篇博客</a>
+          </li>
+        
+          <li>
+            <a href="/2015/03/24/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 dudu<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>
